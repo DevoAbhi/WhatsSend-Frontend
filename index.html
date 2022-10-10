@@ -1,25 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="app.css" rel="stylesheet">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="qrcode.js"></script>
     <!-- <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script> -->
     <script src="script.js" defer></script>
+
+
+
+
+
 </head>
+
 <body>
-    <input type="text" id="name">
-    <input type="text" id="msg">
-    <input type="text" id="day">
-    <input type="text" id="month">
-    <input type="text" id="year">
-    <input type="text" id="hour">
-    <input type="text" id="min">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+            <!-- Navbar brand -->
+            <a class="navbar-brand" href="#">WhatsSend</a>
+
+            <!-- Toggle button -->
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars text-light"></i>
+            </button>
+
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Left links -->
+                <ul class="navbar-nav me-auto d-flex flex-row mt-3 mt-lg-0">
+                    <li class="nav-item text-center mx-2 mx-lg-1">
+                        <a class="nav-link active" aria-current="page" href="#!">
+                            <div>
+                                <i class="fas fa-home fa-lg mb-1"></i>
+                            </div>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item text-center mx-2 mx-lg-1">
+                        <a class="nav-link" href="#!">
+                            <div>
+                                <i class="far fa-envelope fa-lg mb-1"></i>
+                                <span class="badge rounded-pill badge-notification bg-danger">11</span>
+                            </div>
+                            Link
+                        </a>
+                    </li>
+                    <li class="nav-item text-center mx-2 mx-lg-1">
+                        <a class="nav-link disabled" aria-disabled="true" href="#!">
+                            <div>
+                                <i class="far fa-envelope fa-lg mb-1"></i>
+                                <span class="badge rounded-pill badge-notification bg-warning">11</span>
+                            </div>
+                            Disabled
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown text-center mx-2 mx-lg-1">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-mdb-toggle="dropdown" aria-expanded="false">
+                            <div>
+                                <i class="far fa-envelope fa-lg mb-1"></i>
+                                <span class="badge rounded-pill badge-notification bg-primary">11</span>
+                            </div>
+                            Dropdown
+                        </a>
+                        <!-- Dropdown menu -->
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- Left links -->
+
+                <!-- Right links -->
+                <ul class="navbar-nav ms-auto d-flex flex-row mt-3 mt-lg-0">
+                    <li class="nav-item text-center mx-2 mx-lg-1">
+                        <a class="nav-link" href="#!">
+                            <div>
+                                <i class="fas fa-bell fa-lg mb-1"></i>
+                                <span class="badge rounded-pill badge-notification bg-info">11</span>
+                            </div>
+                            Messages
+                        </a>
+                    </li>
+                    <li class="nav-item text-center mx-2 mx-lg-1">
+                        <a class="nav-link" href="#!">
+                            <div>
+                                <i class="fas fa-globe-americas fa-lg mb-1"></i>
+                                <span class="badge rounded-pill badge-notification bg-success">11</span>
+                            </div>
+                            News
+                        </a>
+                    </li>
+                </ul>
+                <!-- Right links -->
+
+                <!-- Search form -->
+                <form class="d-flex input-group w-auto ms-lg-3 my-3 my-lg-0">
+                    <input type="search" class="form-control" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-primary" type="button" data-mdb-ripple-color="dark">
+                        Search
+                    </button>
+                </form>
+            </div>
+            <!-- Collapsible wrapper -->
+        </div>
+        <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+
+
+
+
+
+
+    <div class="basic">
+        <img src="logo.png" alt="">
+    </div>
+    <div class="b1">
+        <input type="text" id="name">
+        <input type="text" id="msg">
+        <input type="text" id="day">
+        <input type="text" id="month">
+        <input type="text" id="year">
+        <input type="text" id="hour">
+        <input type="text" id="min">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    </div>
+
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-lg-12">
+                <div class="card chat-app">
+                    <div id="plist" class="people-list">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-search"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Search...">
+                        </div>
+                        <ul class="list-unstyled chat-list mt-2 mb-0">
+                            <li class="clearfix">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="avatar">
+                                <div class="about">
+                                    <div class="name">Vincent Porter</div>
+                                    <div class="status"> <i class="fa fa-circle offline"></i> left 7 mins ago </div>
+                                </div>
+                            </li>
+                            <li class="clearfix active">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="avatar">
+                                <div class="about">
+                                    <div class="name">Aiden Chavez</div>
+                                    <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="avatar">
+                                <div class="about">
+                                    <div class="name">Mike Thomas</div>
+                                    <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="avatar">
+                                <div class="about">
+                                    <div class="name">Christian Kelly</div>
+                                    <div class="status"> <i class="fa fa-circle offline"></i> left 10 hours ago </div>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar8.png" alt="avatar">
+                                <div class="about">
+                                    <div class="name">Monica Ward</div>
+                                    <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="avatar">
+                                <div class="about">
+                                    <div class="name">Dean Henry</div>
+                                    <div class="status"> <i class="fa fa-circle offline"></i> offline since Oct 28
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="chat">
+                        <div class="chat-header clearfix">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
+                                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="avatar">
+                                    </a>
+                                    <div class="chat-about">
+                                        <h6 class="m-b-0">Aiden Chavez</h6>
+                                        <small>Last seen: 2 hours ago</small>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 hidden-sm text-right">
+                                    <a href="javascript:void(0);" class="btn btn-outline-secondary"><i
+                                            class="fa fa-camera"></i></a>
+                                    <a href="javascript:void(0);" class="btn btn-outline-primary"><i
+                                            class="fa fa-image"></i></a>
+                                    <a href="javascript:void(0);" class="btn btn-outline-info"><i
+                                            class="fa fa-cogs"></i></a>
+                                    <a href="javascript:void(0);" class="btn btn-outline-warning"><i
+                                            class="fa fa-question"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-history">
+                            <ul class="m-b-0">
+                                <li class="clearfix">
+                                    <div class="message-data text-right">
+                                        <span class="message-data-time">10:10 AM, Today</span>
+                                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="avatar">
+                                    </div>
+                                    <div class="message other-message float-right"> Hi Aiden, how are you? How is the
+                                        project coming along? </div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="message-data">
+                                        <span class="message-data-time">10:12 AM, Today</span>
+                                    </div>
+                                    <div class="message my-message">Are we meeting today?</div>
+                                </li>
+                                <li class="clearfix">
+                                    <div class="message-data">
+                                        <span class="message-data-time">10:15 AM, Today</span>
+                                    </div>
+                                    <div class="message my-message">Project has been already finished and I have results
+                                        to show you.</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="chat-message clearfix">
+                            <div class="input-group mb-0">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-send"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Enter text here...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <button id="get-qr">Get QR</button>
     <div id="qr-display"></div>
 </body>
+
 </html>
