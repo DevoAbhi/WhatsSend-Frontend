@@ -45,8 +45,5 @@ const getQR = () => {
 
 }
 
-
-
-
 getQRbtn.addEventListener('click', getQR);
 
