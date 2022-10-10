@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,16 +10,47 @@
     <script src="./assets/js/qrcode.js" defer></script>
     <!-- <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script> -->
     <script src="./assets/js/script.js" defer></script>
+
+    <link href="assets/styles/app.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+    </style>
+
 </head>
+
 <body>
-    <input type="text" id="name" placeholder="name">
-    <input type="text" id="msg" placeholder="message">
-    <input type="text" id="day" placeholder="day">
-    <input type="text" id="month" placeholder="month">
-    <input type="text" id="year" placeholder="year">
-    <input type="text" id="hour" placeholder="hour">
-    <input type="text" id="min" placeholder="minutes">
+    <input type="text" id="name" placeholder="Receipient Name">
+    <input type="text" id="msg" placeholder="Message">
+    <input type="text" id="day" placeholder="Day">
+    <input type="text" id="month" placeholder="Month">
+    <input type="text" id="year" placeholder="Year">
+    <input type="text" id="hour" placeholder="Hour">
+    <input type="text" id="min" placeholder="Minutes">
+
     <button id="get-qr">Get QR</button>
+
     <div id="qr-display"></div>
+
+
+    <div>
+        <button onclick="darkMode()" class="dark" src="d.png" alt=""></button>
+    </div>
+    <script>
+        function darkMode() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
 </body>
+
 </html>
