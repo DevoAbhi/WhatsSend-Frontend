@@ -6,12 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="qrcode.js"></script>
+    <script src="./assets/js/qrcode.js"></script>
     <!-- <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script> -->
-    <script src="script.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <input type="text" id="name" placeholder="Receipient Name">
+    <input type="number" id="number" placeholder="Receipient's 10 digit Number">
     <input type="text" id="msg" placeholder="Message">
     <input type="text" id="day" placeholder="Day">
     <input type="text" id="month" placeholder="Month">
@@ -20,6 +34,18 @@
     <input type="text" id="min" placeholder="Minutes">
 
     <button id="get-qr">Get QR</button>
+
     <div id="qr-display"></div>
+
+
+    <div>
+        <button onclick="darkMode()" class="dark" src="d.png" alt=""></button>
+    </div>
+    <script>
+        function darkMode() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
 </body>
 </html>

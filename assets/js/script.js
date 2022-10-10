@@ -1,6 +1,6 @@
 const getQRbtn =  document.getElementById('get-qr');
 const QRDisplay =  document.getElementById('qr-display');
-const name = document.getElementById('name');
+const number = document.getElementById('number');
 const msg = document.getElementById('msg');
 const day = document.getElementById('day');
 const month = document.getElementById('month');
@@ -9,7 +9,6 @@ const hour = document.getElementById('hour');
 const min = document.getElementById('min');
 
 const getQR = () => {
-    console.log("hello")
     const time = {};
     time.day = day.value;
     time.month = month.value-1;
@@ -17,7 +16,7 @@ const getQR = () => {
     time.hour = hour.value;
     time.min = min.value;
     const payload = {};
-    payload.name = name.value;
+    payload.number = number.value;
     payload.msg = msg.value;
     axios.post("http://127.0.0.1:3000/whatsapp-api", {payload, time}).then(response => {
         console.log(response.data.qr);
