@@ -38,3 +38,5 @@ const getQR = () => {
 
 
 getQRbtn.addEventListener('click', getQR);
+
+// https://whatssend.adaptable.app/whatsapp-api

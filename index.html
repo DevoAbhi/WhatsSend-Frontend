@@ -10,8 +10,7 @@
     <!-- <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script> -->
     <script src="./assets/js/script.js" defer></script>
     <link href="assets/css/styles.css" rel="stylesheet">
-    <link href="assets/styles/app.css" rel="stylesheet">
-    <style> 
+    <style>
         body {
             padding: 25px;
             background-color: white;
@@ -27,7 +26,7 @@
 
 </head>
 
-<body>    
+<body>
     <div class="page-root">
         <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
           <div class="pagebackground box-background--white padding-top--64">
@@ -73,7 +72,7 @@
                   <form>
                     <div class="field padding-bottom--24">
                       <label for="number">Recipient's Number</label>
-                      <input type="tel" name="number" id="number"> 
+                      <input type="tel" name="number" id="number">
                     </div>
                     <div class="field padding-bottom--24">
                         <label for="Message">Message</label>
@@ -90,7 +89,9 @@
                       <div class="field padding-bottom--24">
                        <button id="get-qr" type="button" >Get QR</button>
                       </div>
-                      <div id="qr-display"></div>
+                      <div class="field padding-bottom--24">
+                        <div id="qr-display"></div>
+                      </div>
                   </form>
                 </div>
               </div>
