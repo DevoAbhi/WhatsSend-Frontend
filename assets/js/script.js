@@ -2,19 +2,21 @@ const getQRbtn =  document.getElementById('get-qr');
 const QRDisplay =  document.getElementById('qr-display');
 const number = document.getElementById('number');
 const msg = document.getElementById('msg');
-const day = document.getElementById('day');
-const month = document.getElementById('month');
-const year = document.getElementById('year');
-const hour = document.getElementById('hour');
-const min = document.getElementById('min');
+const date = document.getElementById('Date');
+const timeDOM = document.getElementById('Time');
 
 const getQR = () => {
     const time = {};
-    time.day = day.value;
-    time.month = month.value-1;
-    time.year = year.value;
-    time.hour = hour.value;
-    time.min = min.value;
+    [time.year, time.month, time.day] = String(date.value).split("-");
+    time.year = Number(time.year);
+    time.month = Number(time.month) - 1;
+    time.day = Number(time.day);
+    
+    
+    [time.hour, time.min] = String(timeDOM.value).split(":");
+    time.hour = Number(time.hour);
+    time.min = Number(time.min);
+    
     const payload = {};
     payload.number = number.value;
     payload.msg = msg.value;
