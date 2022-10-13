@@ -236,3 +236,29 @@
       transform: translateX(0px);
     }
   } 
+
+
+/* dark and light mode toggle */
+
+.dark-light-toggle{
+  z-index: 99;
+  position: absolute;
+  left: 25px;
+  top: 30px;
+}
+
+.toggle-icons{
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+.hide-icon{
+  display: none;
+}
+
+.dark-theam{
+  background-color: #101010;
+  color: #ffff;
+  transition: all 0.4s ease-in-out;
+}

@@ -4,6 +4,12 @@ const number = document.getElementById('number');
 const msg = document.getElementById('msg');
 const date = document.getElementById('Date');
 const timeDOM = document.getElementById('Time');
+const sunToggle = document.querySelector('#sun-toggle');
+const moonToggle = document.querySelector('#moon-toggle');
+const toDark = document.querySelectorAll('.to-dark');
+const pageGrid = document.querySelector('.pagebackground-gridContainer');
+
+
 
 const getQR = () => {
     const time = {};
@@ -42,3 +48,35 @@ const getQR = () => {
 getQRbtn.addEventListener('click', getQR);
 
 // https://whatssend.adaptable.app/whatsapp-api
+
+
+// dark and light mode toggle
+
+let isDark = false
+
+if(isDark == false){
+    moonToggle.classList.remove('hide-icon')
+    sunToggle.classList.add('hide-icon')
+}
+
+moonToggle.addEventListener('click', ()=> {
+    moonToggle.classList.add('hide-icon');
+    sunToggle.classList.remove('hide-icon');
+    pageGrid.classList.add('hide-icon');
+    toDark.forEach(e=>{
+        e.classList.add('dark-theam');
+    })
+    isDark == false
+});
+
+sunToggle.addEventListener('click', ()=>{
+    moonToggle.classList.remove('hide-icon');
+    sunToggle.classList.add('hide-icon');
+    pageGrid.classList.remove('hide-icon');
+    toDark.forEach(e=>{
+        e.classList.remove('dark-theam');
+    })
+    isDark == true
+});
+
+

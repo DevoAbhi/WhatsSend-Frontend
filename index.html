@@ -10,6 +10,7 @@
     <script src="./assets/js/qrcode.js" defer></script>
     <!-- <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script> -->
     <script src="./assets/js/script.js" defer></script>
+    
     <link href="assets/css/styles.css" rel="stylesheet">
     <style>
         body {
@@ -19,24 +20,28 @@
             font-size: 25px;
         }
 
-        .dark-mode {
+        /* .dark-mode {
             background-color: black;
             color: white;
-        }
+        } */
     </style>
 
 </head>
 
 <body>
+   <div class="dark-light-toggle">
+    <img src="assets/icons/sun.png" class="toggle-icons" id="sun-toggle" alt="sun">
+    <img src="assets/icons/moon.png" class="toggle-icons" id="moon-toggle" alt="moon">
+   </div>
     <div class="page-root">
-        <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
-          <div class="pagebackground box-background--white padding-top--64">
-            <div class="pagebackground-gridContainer">
+        <div class="box-root flex-flex flex-direction--column to-dark" style="min-height: 100vh;flex-grow: 1;">
+          <div class="pagebackground box-background--white padding-top--64 to-dark">
+            <div class="pagebackground-gridContainer to-dark">
               <div class="box-root flex-flex" style="grid-area: top / start / 8 / end;">
                 <div class="box-root" style="background-image: linear-gradient(white 0%, rgb(247, 250, 252) 33%); flex-grow: 1;">
                 </div>
               </div>
-              <div class="box-root flex-flex" style="grid-area: 4 / 2 / auto / 5;">
+              <div class="box-root flex-flex to-dark" style="grid-area: 4 / 2 / auto / 5;">
                 <div class="box-root box-divider--light-all-2 animationLeftRight tans3s" style="flex-grow: 1;"></div>
               </div>
               <div class="box-root flex-flex" style="grid-area: 6 / start / auto / 2;">
@@ -62,11 +67,11 @@
               </div>
             </div>
           </div>
-          <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
-            <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+          <div class="box-root padding-top--24 flex-flex flex-direction--column to-dark" style="flex-grow: 1; z-index: 9;">
+            <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center to-dark">
               <h1><a href="" rel="dofollow">WhatsSend</a></h1>
             </div>
-            <div class="formbg-outer">
+            <div class="formbg-outer to-dark">
               <div class="formbg">
                 <div class="formbg-inner padding-horizontal--48">
                   <span class="padding-bottom--15">Send your message</span>
@@ -108,7 +113,7 @@
         </div>
       </div>
 
-    <div>
+    <!-- <div>
         <button onclick="darkMode()" class="dark" src="d.png" alt=""></button>
     </div>
     <script>
@@ -116,6 +121,6 @@
             var element = document.body;
             element.classList.toggle("dark-mode");
         }
-    </script>
+    </script> -->
 </body>
 </html>
