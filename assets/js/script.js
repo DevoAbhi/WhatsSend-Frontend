@@ -7,6 +7,7 @@ const timeDOM = document.getElementById('Time');
 const sunToggle = document.querySelector('#sun-toggle');
 const moonToggle = document.querySelector('#moon-toggle');
 const toDark = document.querySelectorAll('.to-dark');
+const removeOnDark = document.querySelector('.remove-on-dark');
 const pageGrid = document.querySelector('.pagebackground-gridContainer');
 
 
@@ -62,7 +63,8 @@ if(isDark == false){
 moonToggle.addEventListener('click', ()=> {
     moonToggle.classList.add('hide-icon');
     sunToggle.classList.remove('hide-icon');
-    pageGrid.classList.add('hide-icon');
+    removeOnDark.classList.add('hide-icon');
+    pageGrid.classList.add('dark-theam');
     toDark.forEach(e=>{
         e.classList.add('dark-theam');
     })
@@ -72,7 +74,8 @@ moonToggle.addEventListener('click', ()=> {
 sunToggle.addEventListener('click', ()=>{
     moonToggle.classList.remove('hide-icon');
     sunToggle.classList.add('hide-icon');
-    pageGrid.classList.remove('hide-icon');
+    removeOnDark.classList.remove('hide-icon');
+    pageGrid.classList.remove('dark-theam');
     toDark.forEach(e=>{
         e.classList.remove('dark-theam');
     })
