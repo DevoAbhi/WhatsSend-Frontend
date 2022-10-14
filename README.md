@@ -10,3 +10,15 @@
  6) Click on the get QR button
  7) Scan the QR with your Whatsapp
  8) Done! Now forget about the message and sleep sound.
+
+## Our amazing Contributors🌟
+
+<a href="https://github.com/DevoAbhi/WhatsSend-Frontend/graphs/contributors">
+  <p align="center">
+    <img  src="https://contrib.rocks/image?repo=DevoAbhi/WhatsSend-Frontend" alt="Project's contributors" />
+  </p>
+</a>
+
+<div align="center">
+  <h2 align="center">Kudos! Your contribution is greatly appreciated.<h2>
+</div>

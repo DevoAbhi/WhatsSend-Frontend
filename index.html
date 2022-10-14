@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="google-site-verification" content="P18YO5QozDxqCqzoj4WovXhOyXCr8w9blmxiN_hKibo" />
+    <title>WhatsSend</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./assets/js/qrcode.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <!-- <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script> -->
     <script src="./assets/js/script.js" defer></script>
-
-    <link href="assets/styles/app.css" rel="stylesheet">
+    <link href="./assets/css/styles.css" rel="stylesheet">
     <style>
         body {
             padding: 25px;
@@ -29,18 +29,91 @@
 </head>
 
 <body>
-    <input type="text" id="name" placeholder="Receipient Name" required>
-    <input type="text" id="msg" placeholder="Message" required>
-    <input type="text" id="day" placeholder="Day">
-    <input type="text" id="month" placeholder="Month">
-    <input type="text" id="year" placeholder="Year">
-    <input type="text" id="hour" placeholder="Hour">
-    <input type="text" id="min" placeholder="Minutes">
-
-    <button id="get-qr">Get QR</button>
-
-    <div id="qr-display"></div>
-
+    <div class="page-root">
+        <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+          <div class="pagebackground box-background--white padding-top--64">
+            <div class="pagebackground-gridContainer">
+              <div class="box-root flex-flex" style="grid-area: top / start / 8 / end;">
+                <div class="box-root" style="background-image: linear-gradient(white 0%, rgb(247, 250, 252) 33%); flex-grow: 1;">
+                </div>
+              </div>
+              <div class="box-root flex-flex" style="grid-area: 4 / 2 / auto / 5;">
+                <div class="box-root box-divider--light-all-2 animationLeftRight tans3s" style="flex-grow: 1;"></div>
+              </div>
+              <div class="box-root flex-flex" style="grid-area: 6 / start / auto / 2;">
+                <div class="box-root box-background--blue800" style="flex-grow: 1;"></div>
+              </div>
+              <div class="box-root flex-flex" style="grid-area: 7 / start / auto / 4;">
+                <div class="box-root box-background--blue animationLeftRight" style="flex-grow: 1;"></div>
+              </div>
+              <div class="box-root flex-flex" style="grid-area: 8 / 4 / auto / 6;">
+                <div class="box-root box-background--gray100 animationLeftRight tans3s" style="flex-grow: 1;"></div>
+              </div>
+              <div class="box-root flex-flex" style="grid-area: 2 / 15 / auto / end;">
+                <div class="box-root box-background--cyan200 animationRightLeft tans4s" style="flex-grow: 1;"></div>
+              </div>
+              <div class="box-root flex-flex" style="grid-area: 3 / 14 / auto / end;">
+                <div class="box-root box-background--blue animationRightLeft" style="flex-grow: 1;"></div>
+              </div>
+              <div class="box-root flex-flex" style="grid-area: 4 / 17 / auto / 20;">
+                <div class="box-root box-background--gray100 animationRightLeft tans4s" style="flex-grow: 1;"></div>
+              </div>
+              <div class="box-root flex-flex" style="grid-area: 5 / 14 / auto / 17;">
+                <div class="box-root box-divider--light-all-2 animationRightLeft tans3s" style="flex-grow: 1;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+            <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+              <h1><a href="" rel="dofollow">WhatsSend</a></h1>
+            </div>
+            <div class="formbg-outer">
+              <div class="formbg">
+                <div class="formbg-inner padding-horizontal--48">
+                  <span class="padding-bottom--15">Send your message</span>
+                  
+                  <form>
+                    <div class="field padding-bottom--24">
+                      <label for="number">Recipient's Number</label>
+                      <input type="tel" name="number" id="number" class="number" value="+">
+                      <label id="helpId" class="help-text"></label>
+                    </div>
+                    <div class="field padding-bottom--24">
+                        <label for="Message">Message</label>
+                        <textarea rows="3" cols="52" id="msg" ></textarea>
+                        <label id="helpId-message" class="help-text-message"></label>
+                      </div>
+                      <div class="field padding-bottom--24">
+                        <label for="Date">Date</label>
+                        <input type="date" name="date" id="Date"  required>
+                        
+                      </div>
+                      <div class="field padding-bottom--24" required>
+                        <label for="Hours">Time</label>
+                        <input type="time" name="time" id="Time" >
+                        
+                      </div>
+                      <div class="field padding-bottom--24">
+                       <button id="get-qr" type="button" >Get QR</button>
+                       
+                      </div>
+                      <div class="field padding-bottom--24">
+                        <div id="qr-display"></div>
+                      </div>
+                  </form>
+                </div>
+              </div>
+              <div class="footer-link padding-top--24">
+                <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
+                  <span><a href="#">© WhatsSend</a></span>
+                  <span><a href="#">Contact</a></span>
+                  <span><a href="#">Privacy & terms</a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <div>
         <button onclick="darkMode()" class="dark" src="d.png" alt=""></button>
@@ -52,5 +125,4 @@
         }
     </script>
 </body>
-
 </html>
