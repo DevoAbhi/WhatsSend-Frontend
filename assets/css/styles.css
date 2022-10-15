@@ -148,6 +148,11 @@ span {
 label {
   margin-bottom: 10px;
 }
+.help-text{
+  font-size:14px;
+  margin-top:-15px;
+}
+
 
 .grid--50-50 {
   display: grid;
