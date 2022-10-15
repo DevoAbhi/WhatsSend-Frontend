@@ -200,6 +200,10 @@ button {
   cursor: pointer;
 }
 
+#qr-display{
+  margin: auto;
+}
+
 input[type="submit"] {
   background-color: rgb(84, 105, 212);
   box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px,
