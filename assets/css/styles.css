@@ -246,31 +246,54 @@ a.ssolink {
 .tans4s {
   animation: animationLeftRight 4s ease-in-out infinite;
 }
+  
+  @keyframes animationLeftRight {
+    0% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(1000px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  } 
+  
+  @keyframes animationRightLeft {
+    0% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(-1000px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  } 
 
-@keyframes animationLeftRight {
-  0% {
-    transform: translateX(0px);
-  }
 
-  50% {
-    transform: translateX(1000px);
-  }
+/* dark and light mode toggle */
 
-  100% {
-    transform: translateX(0px);
-  }
+.dark-light-toggle{
+  z-index: 99;
+  position: fixed;
+  left: 25px;
+  top: 30px;
 }
 
-@keyframes animationRightLeft {
-  0% {
-    transform: translateX(0px);
-  }
+.toggle-icons{
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
 
-  50% {
-    transform: translateX(-1000px);
-  }
+.hide-icon{
+  display: none;
+}
 
-  100% {
-    transform: translateX(0px);
-  }
+.dark-theam{
+  background-color: #1a1f36;
+  color: #ffff;
+  transition: all 0.4s ease-in-out;
+
 }
