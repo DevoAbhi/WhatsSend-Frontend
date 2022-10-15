@@ -87,7 +87,7 @@ function SentMessage(){
     $(".number").css("border", "1px solid green");
     $("#helpId").css("color", "green");
     $(".help-text").html("Sent");
-    $(".padding-bottom--15").html("Sent Successful");
+    $(".padding-bottom--15").html("Sent Successfully");
     getQR();
    
 }
