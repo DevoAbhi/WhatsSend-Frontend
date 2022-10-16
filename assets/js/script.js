@@ -46,7 +46,7 @@ const getQR = () => {
 
 
 
-getQRbtn.addEventListener('click', getQR);
+// getQRbtn.addEventListener('click', getQR);
 
 // https://whatssend.adaptable.app/whatsapp-api
 
@@ -82,4 +82,39 @@ sunToggle.addEventListener('click', ()=>{
     isDark == true
 });
 
+// validation code 
+$("#get-qr").click(function (e) { 
+    e.preventDefault();
+   
+    const Number_regular_expression =/[0-9]/g ;
+        let numbers = $("#number").val();
 
+        let msg = $(".help-text-message").val()
+      
+        let checker = () => {
+           
+            if(numbers.match(Number_regular_expression) && (numbers.length==10)){
+                $("#helpId").show("");
+                $(".number").css("border", "1px solid green");
+                $(".number").removeAttr("class");
+                $(".help-text").html("valid");
+                $("#helpId").css("color", "green");
+                    getQR();
+                //called the getquery function on valid validation
+               }else if((numbers === "") && numbers!=Number_regular_expression){
+                $("#helpId").show("");
+                $(".number").css("border", "1px solid red");
+                $("#helpId").css("color", "red");
+                $(".help-text").html("This field cannot be empty");
+                  
+               }
+               else{
+                console.log("not-matched");
+                $("#helpId").show("");
+                $("#helpId").css("color", "red");
+                $(".number").css("border", "1px solid red");
+                $(".help-text").html("Invalid Receipient-Number");
+               }
+        }
+        checker()
+});
