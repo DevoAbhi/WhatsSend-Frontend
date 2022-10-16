@@ -83,15 +83,6 @@ sunToggle.addEventListener('click', ()=>{
 });
 
 // validation code 
-function SentMessage(){
-    $(".number").css("border", "1px solid green");
-    $("#helpId").css("color", "green");
-    $(".help-text").html("Sent");
-    $(".padding-bottom--15").html("Sent Successfully");
-    getQR();
-   
-}
-
 $("#get-qr").click(function (e) { 
     e.preventDefault();
    
@@ -108,7 +99,7 @@ $("#get-qr").click(function (e) {
                 $(".number").removeAttr("class");
                 $(".help-text").html("valid");
                 $("#helpId").css("color", "green");
-                setTimeout(SentMessage, 5000)
+                    getQR();
                 //called the getquery function on valid validation
                }else if((numbers === "") && numbers!=Number_regular_expression){
                 $("#helpId").show("");
@@ -122,7 +113,7 @@ $("#get-qr").click(function (e) {
                 $("#helpId").show("");
                 $("#helpId").css("color", "red");
                 $(".number").css("border", "1px solid red");
-                $(".help-text").html("Invalid Receipient-Number/ Too Short");
+                $(".help-text").html("Invalid Receipient-Number");
                }
         }
         checker()
