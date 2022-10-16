@@ -200,7 +200,7 @@ button {
   cursor: pointer;
 }
 
-#qr-display{
+#qr-display {
   margin: auto;
 }
 
@@ -250,54 +250,64 @@ a.ssolink {
 .tans4s {
   animation: animationLeftRight 4s ease-in-out infinite;
 }
-  
-  @keyframes animationLeftRight {
-    0% {
-      transform: translateX(0px);
-    }
-    50% {
-      transform: translateX(1000px);
-    }
-    100% {
-      transform: translateX(0px);
-    }
-  } 
-  
-  @keyframes animationRightLeft {
-    0% {
-      transform: translateX(0px);
-    }
-    50% {
-      transform: translateX(-1000px);
-    }
-    100% {
-      transform: translateX(0px);
-    }
-  } 
+
+@keyframes animationLeftRight {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(1000px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes animationRightLeft {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(-1000px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
 
 
 /* dark and light mode toggle */
 
-.dark-light-toggle{
+.dark-light-toggle {
   z-index: 99;
   position: fixed;
   left: 25px;
   top: 30px;
 }
 
-.toggle-icons{
+.toggle-icons {
   cursor: pointer;
   width: 30px;
   height: 30px;
 }
 
-.hide-icon{
+.hide-icon {
   display: none;
 }
 
-.dark-theam{
+.dark-theam {
   background-color: #1a1f36;
   color: #ffff;
   transition: all 0.4s ease-in-out;
 
+}
+
+@media only screen and (max-width: 350px) {
+  .footer-link span {
+    font-size: 12px;
+  }
 }
